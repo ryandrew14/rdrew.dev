@@ -28,5 +28,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-yaml`,
+    `gatsby-plugin-styled-components`,
   ],
 }

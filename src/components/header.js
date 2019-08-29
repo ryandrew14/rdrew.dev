@@ -18,7 +18,17 @@ const Links = styled.div`
   display: flex;
 
   >:not(:last-child) {
-    margin-right: 25px;
+    margin-right: 30px;
+  }
+`
+
+const Anchor = styled.a`
+  color: #000;
+  transition: color 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    color: #b71b03;
   }
 `
 
@@ -26,9 +36,8 @@ const Header = ({ siteTitle }) => (
   <Nav>
     <Name>{siteTitle}</Name>
     <Links>
-      <span>about</span>
-      <span>resume</span>
-      <span>contact</span>
+      <Anchor href="resume.pdf" rel="noreferrer noopener" target="_blank">resume</Anchor>
+      <Anchor href="mailto:drew.r@husky.neu.edu">contact</Anchor>
     </Links>
   </Nav>
 );

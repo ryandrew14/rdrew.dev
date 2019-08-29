@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons'
 
+import Anchor from "styles/anchor"
+
 const Header = styled.div`
   font-size: 1.5rem;
   font-weight: 200;
@@ -73,15 +75,6 @@ const CardImagePlaceholder = styled.div`
   height: 326px;
 `
 
-const Anchor = styled.a`
-  color: #000;
-  transition: color 0.3s;
-  text-decoration: none;
-
-  &:hover {
-    color: #b71b03;
-  }
-`
 const WorkCard = ({ item }) => {
   return (
     <CardWrapper>

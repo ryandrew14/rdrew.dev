@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import Anchor from "styles/anchor"
+
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
@@ -19,16 +21,6 @@ const Links = styled.div`
 
   >:not(:last-child) {
     margin-right: 30px;
-  }
-`
-
-const Anchor = styled.a`
-  color: #000;
-  transition: color 0.3s;
-  text-decoration: none;
-
-  &:hover {
-    color: #b71b03;
   }
 `
 

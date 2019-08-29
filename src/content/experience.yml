@@ -1,6 +1,7 @@
 - name: Paperless Parts
   type: co-op
   web: https://www.paperlessparts.com/
+  image: ./images/paperless.png
   description: >
     I worked full-time as a software engineer as part of Northeastern
     University's co-op program. I developed robust solutions to product requests
@@ -10,7 +11,10 @@
 - name: Ping Identity
   type: internship
   web: https://www.pingidentity.com/en.html
+  image: ./images/ping.png
   description: >
-    I worked as an intern on the solutions architecture team.
+    I worked as an intern on the solutions architecture team. I developed product
+    adapters for customers and developed a reusable environment used by the sales
+    team to demo custom product features.
   extras:
     - "📅 Jul-Aug 2018"

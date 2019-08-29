@@ -142,8 +142,6 @@ const Portfolio = () => {
             extras
             image {
               childImageSharp {
-                # Specify the image processing specifications right in the query.
-                # Makes it trivial to update as your page's design changes.
                 fixed(width: 326, height: 326) {
                   ...GatsbyImageSharpFixed
                 }
@@ -160,6 +158,13 @@ const Portfolio = () => {
             description
             web
             extras
+            image {
+              childImageSharp {
+                fixed(width: 326, height: 326) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }

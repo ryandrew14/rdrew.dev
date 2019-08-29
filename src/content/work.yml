@@ -2,6 +2,7 @@
   type: Project
   github: https://github.com/sandboxnu/sandboxneu.com
   web: https://www.sandboxneu.com/
+  image: ./images/sandbox_site.png
   description: >
     I led design for and development of the main website for Sandbox, 
     a software consulting student organization at Northeastern University.
@@ -10,6 +11,7 @@
   type: Project
   github: https://github.com/dajinchu/TRACE
   web: https://trace.dajinchu.now.sh
+  image: ./images/trace.png
   description: >
     I designed and imlemented the frontend for a web application that 
     allows Northeastern students to view course evaluation data.

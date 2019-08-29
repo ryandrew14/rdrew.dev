@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -75,10 +76,16 @@ const CardImagePlaceholder = styled.div`
   height: 326px;
 `
 
+const StyledImg = styled(Img)`
+  min-width: 326px;
+  border-radius: 5px;
+`
+
 const WorkCard = ({ item }) => {
   return (
     <CardWrapper>
-      <CardImagePlaceholder />
+      {item.image && <StyledImg fixed={item.image.childImageSharp.fixed} />}
+      {!item.image && <CardImagePlaceholder/>}
       <CardInfo>
         <CardType>
           {item.type}
@@ -133,6 +140,15 @@ const Portfolio = () => {
             github
             web
             extras
+            image {
+              childImageSharp {
+                # Specify the image processing specifications right in the query.
+                # Makes it trivial to update as your page's design changes.
+                fixed(width: 326, height: 326) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }

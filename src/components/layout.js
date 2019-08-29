@@ -17,6 +17,10 @@ const Footer = styled.footer`
   margin-top: 50%;
 `
 
+const Margin = styled.div`
+  margin: 42px 124px;
+`
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -29,7 +33,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <Margin>
       <CSSReset />
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
@@ -37,7 +41,7 @@ const Layout = ({ children }) => {
       <Footer>
         © {new Date().getFullYear()}, Ryan Drew
       </Footer>
-    </>
+    </Margin>
   )
 }
 

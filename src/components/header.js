@@ -2,10 +2,10 @@ import React from "react"
 import styled from "styled-components"
 
 const Nav = styled.nav`
-  margin: 42px 124px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 80px;
 `
 
 const Name = styled.span`

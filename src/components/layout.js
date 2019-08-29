@@ -19,7 +19,13 @@ const Footer = styled.footer`
 `
 
 const Margin = styled.div`
-  margin: 42px 124px;
+  @media (min-width: 910px) {
+    margin: 42px 124px;
+  }
+  @media (min-width: 400px) {
+    margin: 42px 80px;
+  }
+  margin: 42px 40px;
 `
 
 const Layout = ({ children }) => {

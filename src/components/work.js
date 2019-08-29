@@ -16,7 +16,7 @@ const CarouselWrapper = styled.div`
   margin: 30px 0;
 
   >:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 80px;
   }
 `
 
@@ -24,19 +24,38 @@ const CardWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   min-width: 650px;
+
+  >:not(:last-child) {
+    margin-right: 32px;
+  }
 `
 
 const CardInfo = styled.div`
-  font-weight: 300;
+  font-weight: 200;
   font-size: 1.3em;
+
+  >:not(:last-child) {
+    margin-bottom: 1em;
+  }
 `
 
-const CardTitle = styled.h1`
+const CardType = styled.h2`
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+`
 
+const CardName = styled.h1`
+  font-size: 1.5rem;
+`
+
+const CardDescription = styled.div`
+  line-height: 1.2;
 `
 
 const CardImagePlaceholder = styled.div`
-  background-color: #fdfdfd;
+  background-color: #5063f4;
   min-width: 326px;
   height: 326px;
 `
@@ -46,10 +65,18 @@ const WorkCard = ({ item }) => {
     <CardWrapper>
       <CardImagePlaceholder />
       <CardInfo>
-        <CardTitle>
-          {item.title}
-        </CardTitle>
-        {item.description}
+        <CardType>
+          {item.type}
+        </CardType>
+        <CardName>
+          {item.name}
+        </CardName>
+        <div>
+
+        </div>
+        <CardDescription>
+          {item.description}
+        </CardDescription>
       </CardInfo>
     </CardWrapper>
   )

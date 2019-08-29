@@ -18,11 +18,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `rdrew.dev`,
+        short_name: `rdrew.dev`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#F6F6F6`,
+        theme_color: `#B71B03`,
         display: `minimal-ui`,
         icon: `src/content/images/rose.png`, // This path is relative to the root of the site.
       },

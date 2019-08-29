@@ -1,13 +1,16 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faWindowRestore } from '@fortawesome/free-regular-svg-icons'
 
 const Header = styled.div`
-  font-size: 1.5em;
-  font-weight: 300;
-  padding-bottom: 5px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  padding-bottom: 8px;
   border-bottom: 1px solid black;
-  max-width: 200px;
+  max-width: 135px;
 `
 
 const CarouselWrapper = styled.div`
@@ -32,7 +35,7 @@ const CardWrapper = styled.div`
 
 const CardInfo = styled.div`
   font-weight: 200;
-  font-size: 1.3em;
+  font-size: 1.125rem;
 
   >:not(:last-child) {
     margin-bottom: 1em;
@@ -41,13 +44,23 @@ const CardInfo = styled.div`
 
 const CardType = styled.h2`
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.125rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 `
 
 const CardName = styled.h1`
   font-size: 1.5rem;
+`
+
+const Links = styled.div`
+  >:not(:last-child) {
+    margin-right: 10px;
+  }
+`
+
+const Extra = styled.li`
+  font-size: .86rem;
 `
 
 const CardDescription = styled.div`
@@ -60,6 +73,15 @@ const CardImagePlaceholder = styled.div`
   height: 326px;
 `
 
+const Anchor = styled.a`
+  color: #000;
+  transition: color 0.3s;
+  text-decoration: none;
+
+  &:hover {
+    color: #b71b03;
+  }
+`
 const WorkCard = ({ item }) => {
   return (
     <CardWrapper>
@@ -71,9 +93,19 @@ const WorkCard = ({ item }) => {
         <CardName>
           {item.name}
         </CardName>
-        <div>
-
-        </div>
+        <Links>
+          <Anchor href={item.github}>
+            <FontAwesomeIcon icon={faGithub}/>
+          </Anchor>
+          <Anchor href={item.web}>
+            <FontAwesomeIcon icon={faWindowRestore}/>
+          </Anchor>
+        </Links>
+        {item.extras && (
+          <ul>
+            {item.extras.map(extra => <Extra key={extra}>{extra}</Extra>)}
+          </ul>
+        )}
         <CardDescription>
           {item.description}
         </CardDescription>

@@ -58,6 +58,7 @@ const GlobalStyle = createGlobalStyle`
 
 	@media (min-width: 400px) {
 		html {
+			font-size: 16px;
 		}
 	}
 

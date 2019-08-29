@@ -87,12 +87,16 @@ const WorkCard = ({ item }) => {
           {item.name}
         </CardName>
         <Links>
-          <Anchor href={item.github} newTab>
-            <FontAwesomeIcon icon={faGithub}/>
-          </Anchor>
-          <Anchor href={item.web} newTab>
-            <FontAwesomeIcon icon={faWindowRestore}/>
-          </Anchor>
+          {item.github && (
+            <Anchor href={item.github} newTab>
+              <FontAwesomeIcon icon={faGithub}/>
+            </Anchor>
+          )}
+          {item.web && (
+            <Anchor href={item.web} newTab>
+              <FontAwesomeIcon icon={faWindowRestore}/>
+            </Anchor>
+          )}
         </Links>
         {item.extras && (
           <ul>
@@ -117,9 +121,9 @@ const Carousel = ({ data }) => {
   )
 }
 
-const Work = () => {
+const Portfolio = () => {
   const data = useStaticQuery(graphql`
-    query WorkQuery {
+    query PortfolioQuery {
       allWorkYaml {
         edges {
           node {
@@ -132,21 +136,35 @@ const Work = () => {
           }
         }
       }
+      allExperienceYaml {
+        edges {
+          node {
+            name
+            type
+            description
+            web
+            extras
+          }
+        }
+      }
     }
   `)
 
   const work = data.allWorkYaml.edges.map(e => e.node)
+  const experience = data.allExperienceYaml.edges.map(e => e.node)
 
   return (
     <>
-    <Header>
-      work
-    </Header>
-    <Carousel data={work}>
-
-    </Carousel>
+      <Header>
+        work
+      </Header>
+      <Carousel data={work} />
+      <Header>
+        experience
+      </Header>
+      <Carousel data={experience} />
     </>
   )
 }
 
-export default Work
+export default Portfolio

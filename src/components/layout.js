@@ -14,7 +14,8 @@ import GlobalStyle, { CSSReset } from "./globalStyle"
 
 const Footer = styled.footer`
   text-align: center;
-  margin-top: 50%;
+  color: #adadad;
+  font-size: 14px;
 `
 
 const Margin = styled.div`
@@ -39,7 +40,7 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
       <Footer>
-        © {new Date().getFullYear()}, Ryan Drew
+        © {new Date().getFullYear()} | Designed and Built by Ryan Drew
       </Footer>
     </Margin>
   )

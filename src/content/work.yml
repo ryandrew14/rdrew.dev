@@ -1,0 +1,17 @@
+- name: Sandbox Website
+  type: Project
+  github: https://github.com/sandboxnu/sandboxneu.com
+  web: https://www.sandboxneu.com/
+  description: >
+    I led design for and development of the main website for Sandbox, 
+    a software consulting student organization at Northeastern University.
+  extras: []
+- name: SearchTRACE
+  type: Project
+  github: https://github.com/dajinchu/TRACE
+  web: https://trace.dajinchu.now.sh
+  description: >
+    I designed and imlemented the frontend for a web application that 
+    allows Northeastern students to view course evaluation data.
+  extras:
+    - "🏆 UI/UX Award @ HackDartmouth"

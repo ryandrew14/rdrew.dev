@@ -53,7 +53,14 @@ table {
 const GlobalStyle = createGlobalStyle`
   html {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-size: 14px;
   }
+
+	@media (min-width: 400px) {
+		html {
+		}
+	}
+
   body {
     height: 100vh;
     background-color: #F6F6F6;

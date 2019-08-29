@@ -87,10 +87,10 @@ const WorkCard = ({ item }) => {
           {item.name}
         </CardName>
         <Links>
-          <Anchor href={item.github}>
+          <Anchor href={item.github} newTab>
             <FontAwesomeIcon icon={faGithub}/>
           </Anchor>
-          <Anchor href={item.web}>
+          <Anchor href={item.web} newTab>
             <FontAwesomeIcon icon={faWindowRestore}/>
           </Anchor>
         </Links>

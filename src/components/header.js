@@ -28,7 +28,7 @@ const Header = ({ siteTitle }) => (
   <Nav>
     <Name>{siteTitle}</Name>
     <Links>
-      <Anchor href="resume.pdf" rel="noreferrer noopener" target="_blank">resume</Anchor>
+      <Anchor href="resume.pdf" newTab>resume</Anchor>
       <Anchor href="mailto:drew.r@husky.neu.edu">contact</Anchor>
     </Links>
   </Nav>

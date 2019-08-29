@@ -1,6 +1,8 @@
 - name: Paperless Parts
   type: co-op
+  subtitle: Software Engineering Co-op
   web: https://www.paperlessparts.com/
+  linkedin: https://www.linkedin.com/company/paperlessparts/
   image: ./images/paperless.png
   description: >
     I worked full-time as a software engineer as part of Northeastern
@@ -10,7 +12,9 @@
     - "📅 Jan-Aug 2019"
 - name: Ping Identity
   type: internship
+  subtitle: Solutions Architecture Intern
   web: https://www.pingidentity.com/en.html
+  linkedin: https://www.linkedin.com/company/ping-identity/
   image: ./images/ping.png
   description: >
     I worked as an intern on the solutions architecture team. I developed product
@@ -18,3 +22,15 @@
     team to demo custom product features.
   extras:
     - "📅 Jul-Aug 2018"
+- name: Sandbox at Northeastern
+  type: student organization
+  subtitle: Executive Director & Co-founder
+  web: https://sandboxneu.com
+  linkedin: https://www.linkedin.com/company/sandboxneu/
+  image: ./images/sandbox.png
+  description: >
+    I lead vision and growth for Sandbox, a new software consulting organization
+    that I founded with two friends at Northeastern. We employ modern software deveopment
+    practices to build impactful software for academic researchers.
+  extras:
+    - "📅 Oct 2018-Present"

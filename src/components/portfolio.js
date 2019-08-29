@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons'
 
 import Anchor from "styles/anchor"
@@ -18,21 +18,36 @@ const Header = styled.div`
 
 const CarouselWrapper = styled.div`
   display: flex;
-  overflow: scroll;
+  flex-direction: column;
+  >:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 430px) {
+    overflow: scroll;
+    flex-direction: row;
+    >:not(:last-child) {
+      margin-right: 80px;
+    }
+  }
   margin: 30px 0;
 
-  >:not(:last-child) {
-    margin-right: 80px;
-  }
 `
 
 const CardWrapper = styled.div`
   display: flex;
+  flex-direction: column-reverse;
+  min-width: 250px;
   justify-content: space-between;
-  min-width: 650px;
+  >:last-child {
+    margin-bottom: 20px;
+  }
 
-  >:not(:last-child) {
-    margin-right: 32px;
+  @media (min-width: 430px) {
+    flex-direction: row;
+    min-width: 650px;
+    >:not(:last-child) {
+      margin-right: 32px;
+    }
   }
 `
 
@@ -41,7 +56,7 @@ const CardInfo = styled.div`
   font-size: 1.125rem;
 
   >:not(:last-child) {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
 `
 
@@ -54,6 +69,11 @@ const CardType = styled.h2`
 
 const CardName = styled.h1`
   font-size: 1.5rem;
+`
+
+const CardSubtitle = styled.h3`
+  font-size: 1rem;
+  font-style: italic;
 `
 
 const Links = styled.div`
@@ -77,22 +97,23 @@ const CardImagePlaceholder = styled.div`
 `
 
 const StyledImg = styled(Img)`
-  min-width: 326px;
+  max-width: 100%;
+  min-width: 0;
+  @media (min-width: 430px) {
+    min-width: 326px;
+  }
   border-radius: 5px;
 `
 
 const WorkCard = ({ item }) => {
   return (
     <CardWrapper>
-      {item.image && <StyledImg fixed={item.image.childImageSharp.fixed} />}
+      {item.image && <StyledImg fluid={item.image.childImageSharp.fluid} />}
       {!item.image && <CardImagePlaceholder/>}
       <CardInfo>
-        <CardType>
-          {item.type}
-        </CardType>
-        <CardName>
-          {item.name}
-        </CardName>
+        <CardType>{item.type}</CardType>
+        <CardName>{item.name}</CardName>
+        {item.subtitle && <CardSubtitle>{item.subtitle}</CardSubtitle>}
         <Links>
           {item.github && (
             <Anchor href={item.github} newTab>
@@ -104,15 +125,18 @@ const WorkCard = ({ item }) => {
               <FontAwesomeIcon icon={faWindowRestore}/>
             </Anchor>
           )}
+          {item.linkedin && (
+            <Anchor href={item.linkedin} newTab>
+              <FontAwesomeIcon icon={faLinkedin}/>
+            </Anchor>
+          )}
         </Links>
         {item.extras && (
           <ul>
             {item.extras.map(extra => <Extra key={extra}>{extra}</Extra>)}
           </ul>
         )}
-        <CardDescription>
-          {item.description}
-        </CardDescription>
+        <CardDescription>{item.description}</CardDescription>
       </CardInfo>
     </CardWrapper>
   )
@@ -142,8 +166,8 @@ const Portfolio = () => {
             extras
             image {
               childImageSharp {
-                fixed(width: 326, height: 326) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 326, maxHeight: 326) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -155,13 +179,15 @@ const Portfolio = () => {
           node {
             name
             type
+            subtitle
             description
             web
+            linkedin
             extras
             image {
               childImageSharp {
-                fixed(width: 326, height: 326) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 326, maxHeight: 326) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

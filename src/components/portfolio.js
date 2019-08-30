@@ -51,11 +51,16 @@ const CardWrapper = styled.div`
 
   @media (min-width: 700px) {
     flex-direction: row;
-    flex-basis: calc(50% - 40px);
+    flex-basis: fill;
+    max-width: none;
     min-width: 600px;
     >:not(:last-child) {
       margin-right: 32px;
     }
+  }
+
+  @media (min-width: 1340px) {
+    flex-basis: min-content;
   }
 `
 

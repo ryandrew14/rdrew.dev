@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 import Anchor from "styles/anchor"
 
@@ -21,9 +23,13 @@ const Name = styled.span`
 
 const Links = styled.div`
   display: flex;
-
   >:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 10px;
+  }
+  @media (min-width: 500px) {
+    >:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 `
 
@@ -32,7 +38,13 @@ const Header = ({ siteTitle }) => (
     <Name>{siteTitle}</Name>
     <Links>
       <Anchor href="resume.pdf" newTab>resume</Anchor>
-      <Anchor href="mailto:drew.r@husky.neu.edu">contact</Anchor>
+      <Anchor href="mailto:drew.r@husky.neu.edu">mail</Anchor>
+      <Anchor href="https://github.com/ryandrew14">
+        <FontAwesomeIcon icon={faGithub}/>
+      </Anchor>
+      <Anchor href="https://linkedin.com/in/ryandrew14">
+        <FontAwesomeIcon icon={faLinkedin}/>
+      </Anchor>
     </Links>
   </Nav>
 );

@@ -12,8 +12,18 @@ const Header = styled.div`
   font-size: 1.5rem;
   font-weight: 200;
   padding-bottom: 8px;
-  border-bottom: 1px solid black;
-  max-width: 135px;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    display: block;
+    content: "";
+    border-top: 1px solid black;
+    flex-grow: 1;
+    margin-top: .2em;
+    margin-left: 15px;
+  }
 `
 
 const CarouselWrapper = styled.div`

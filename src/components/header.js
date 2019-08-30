@@ -7,7 +7,10 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
+  @media (min-width: 400px) {
+    margin-bottom: 80px;
+  }
 `
 
 const Name = styled.span`

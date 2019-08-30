@@ -29,17 +29,16 @@ const Header = styled.div`
 const CarouselWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  >:not(:last-child) {
-    margin-bottom: 20px;
-  }
+  flex-wrap: wrap;
+  margin: 30px auto 50px;
+  justify-content: space-between;
   @media (min-width: 430px) {
-    overflow: scroll;
     flex-direction: row;
-    >:not(:last-child) {
-      margin-right: 80px;
+    overflow: wrap;
+    >:nth-child(odd) {
+      margin-right: 20px;
     }
   }
-  margin: 30px 0;
 
 `
 
@@ -48,13 +47,12 @@ const CardWrapper = styled.div`
   flex-direction: column-reverse;
   min-width: 250px;
   justify-content: space-between;
-  >:last-child {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 40px;
 
-  @media (min-width: 430px) {
+  @media (min-width: 700px) {
     flex-direction: row;
-    min-width: 650px;
+    flex-basis: calc(50% - 40px);
+    min-width: 600px;
     >:not(:last-child) {
       margin-right: 32px;
     }
@@ -98,6 +96,10 @@ const Extra = styled.li`
 
 const CardDescription = styled.div`
   line-height: 1.2;
+  padding-bottom: 30px;
+  @media (min-width: 700px) {
+    padding-bottom: 0;
+  }
 `
 
 const CardImagePlaceholder = styled.div`
@@ -109,6 +111,7 @@ const CardImagePlaceholder = styled.div`
 const StyledImg = styled(Img)`
   max-width: 100%;
   min-width: 0;
+  max-height: 326px;
   @media (min-width: 430px) {
     min-width: 326px;
   }

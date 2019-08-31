@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-import PortfolioItems from './portfolioItems'
+import PortfolioItems from "./portfolioItems"
 
 const Header = styled.div`
   font-size: 1.5rem;
@@ -17,7 +17,7 @@ const Header = styled.div`
     content: "";
     border-top: 1px solid black;
     flex-grow: 1;
-    margin-top: .2em;
+    margin-top: 0.2em;
     margin-left: 15px;
   }
 `
@@ -105,24 +105,18 @@ const Portfolio = () => {
 
   return (
     <>
-    {about.tagline && (
-      <AboutTagline dangerouslySetInnerHTML={{ __html: about.tagline }} />
-    )}
-      <Header>
-        work
-      </Header>
+      {about.tagline && (
+        <AboutTagline dangerouslySetInnerHTML={{ __html: about.tagline }} />
+      )}
+      <Header>work</Header>
       <PortfolioItems data={work} />
-      <Header>
-        experience
-      </Header>
+      <Header>experience</Header>
       <PortfolioItems data={experience} />
-      <Header>
-        about
-      </Header>
+      <Header>about</Header>
       {about.bodyParagraphs && (
         <AboutBody>
           {about.bodyParagraphs.map(paragraph => {
-            return <div key={paragraph.slice(0,10)} >{paragraph}</div>
+            return <div key={paragraph.slice(0, 10)}>{paragraph}</div>
           })}
         </AboutBody>
       )}

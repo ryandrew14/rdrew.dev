@@ -48,7 +48,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-`;
+`
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -66,6 +66,6 @@ const GlobalStyle = createGlobalStyle`
     height: 100vh;
     background-color: #F6F6F6;
   }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

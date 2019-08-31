@@ -1,7 +1,7 @@
 import { keyframes } from "styled-components"
 
 // TODO maybe make this into an NPM package?
-// stolen from my own code 
+// stolen from my own code
 // https://github.com/sandboxnu/sandboxneu.com/blob/master/src/styles/animations.js
 
 /**

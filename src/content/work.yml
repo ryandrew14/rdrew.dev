@@ -18,6 +18,15 @@
     library for our use case.
   extras:
     - "❗️No demo available (sensitive content)"
+- name: Webpack Chunk Truncation
+  type: open-source software
+  github: https://github.com/webpack/webpack
+  web: https://webpack.js.org/plugins/split-chunks-plugin/#splitchunksautomaticnamemaxlength
+  image: ./images/webpack.png
+  description: >
+    I wrote a new feature into Webpack in my spare time to alleviate
+    a pain point my team was having at work. I also wrote documentation to cover
+    this feature.
 - name: Sandbox Website
   type: Project
   github: https://github.com/sandboxnu/sandboxneu.com

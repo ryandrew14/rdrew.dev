@@ -48,10 +48,7 @@ const CardWrapper = styled.div`
   min-width: 250px;
   justify-content: space-between;
   margin-bottom: 40px;
-  animation: ${props => {
-    console.log(props)
-    return FadeInSlideUp(props.percent, "20px", true)
-  }} .7s;
+  animation: ${props => FadeInSlideUp(props.percent, "20px", true)} .7s;
 
   @media (min-width: 700px) {
     flex-direction: row;
@@ -65,6 +62,10 @@ const CardWrapper = styled.div`
 
   @media (min-width: 1340px) {
     flex-basis: min-content;
+    ${props => props.showOne && `
+      flex-basis: max-content;
+      max-width: 75%;
+    `}
   }
 `
 
@@ -129,7 +130,7 @@ const StyledImg = styled(Img)`
 
 const WorkCard = ({ item, percent }) => {
   return (
-    <CardWrapper percent={percent}>
+    <CardWrapper percent={percent} showOne={!!item.subtitle}>
       {item.image && <StyledImg fluid={item.image.childImageSharp.fluid} />}
       {!item.image && <CardImagePlaceholder/>}
       <CardInfo>

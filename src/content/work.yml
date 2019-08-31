@@ -1,12 +1,3 @@
-- name: Sandbox Website
-  type: Project
-  github: https://github.com/sandboxnu/sandboxneu.com
-  web: https://www.sandboxneu.com/
-  image: ./images/sandbox_site.png
-  description: >
-    I led the design and development of the main website for Sandbox, 
-    a software consulting student organization at Northeastern University.
-  extras: []
 - name: SearchTRACE
   type: Project
   github: https://github.com/dajinchu/TRACE
@@ -17,3 +8,22 @@
     allows Northeastern students to view course evaluation data.
   extras:
     - "🏆 UI/UX Award @ HackDartmouth"
+- name: Predictive Affect
+  type: project
+  github: https://github.com/sandboxnu/predictive-affect
+  image: ./images/predictive_affect.png
+  description: >
+    I led a team of developers in building a web application for a psychology
+    researcher. I added a build system using Webpack and modified an open-source
+    library for our use case.
+  extras:
+    - "❗️No demo available (sensitive content)"
+- name: Sandbox Website
+  type: Project
+  github: https://github.com/sandboxnu/sandboxneu.com
+  web: https://www.sandboxneu.com/
+  image: ./images/sandbox_site.png
+  description: >
+    I led the design and development of the main website for Sandbox, 
+    a software consulting student organization at Northeastern University.
+  extras: []

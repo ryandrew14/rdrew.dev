@@ -2,12 +2,12 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons'
 
 import Anchor from "styles/anchor"
 import { FadeInSlideUp } from "styles/animations"
+import FontAwesomeIcon from 'styles/fontAwesomeIconNormalized'
 
 const Header = styled.div`
   font-size: 1.5rem;

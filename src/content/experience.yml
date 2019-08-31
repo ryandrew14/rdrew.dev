@@ -14,6 +14,19 @@
     over 60% and decreasing bundle size.
   extras:
     - "📅 Jan-Aug 2019"
+- name: Sandbox at Northeastern
+  type: student organization
+  subtitle: Executive Director & Co-founder
+  web: https://sandboxneu.com
+  linkedin: https://www.linkedin.com/company/sandboxneu/
+  image: ./images/sandbox.png
+  description: >
+    I lead vision and growth for Sandbox, a new software consulting organization
+    that I founded with two friends at Northeastern. We employ modern software deveopment
+    practices to build impactful software for academic researchers. I also lead
+    a team of developers in construction of a web application for research.
+  extras:
+    - "📅 Oct 2018-Present"
 - name: Ping Identity
   type: internship
   subtitle: Solutions Architecture Intern
@@ -28,16 +41,3 @@
     and onsite sales meetings to better understand customer needs.
   extras:
     - "📅 Jul-Aug 2018"
-- name: Sandbox at Northeastern
-  type: student organization
-  subtitle: Executive Director & Co-founder
-  web: https://sandboxneu.com
-  linkedin: https://www.linkedin.com/company/sandboxneu/
-  image: ./images/sandbox.png
-  description: >
-    I lead vision and growth for Sandbox, a new software consulting organization
-    that I founded with two friends at Northeastern. We employ modern software deveopment
-    practices to build impactful software for academic researchers. I also lead
-    a team of developers in construction of a web application for research.
-  extras:
-    - "📅 Oct 2018-Present"

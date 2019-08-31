@@ -1,7 +1,13 @@
-- body: >
-    I study computer science at Northeastern University in Boston. I recently completed my first co-op
-    at a start-up in Boston called Paperless Parts, where I enjoyed the luxury of being a large portion
-    of the small product team.
+- bodyParagraphs:
+    - >
+      I study computer science at Northeastern University in Boston. I recently completed my first co-op
+      at a start-up in Boston called Paperless Parts, where I enjoyed the luxury of being a large portion
+      of the small product team. I was able to contribute extensively to the front-end and back-end of the
+      product, while handling the side responsibility of managing and upgrading our QA processes.
+    - >
+      When I'm not working on school or Sandbox, I'm an avid open-source contributor, and I've written code
+      for projects like Webpack and GatsbyJS. Outside of programming, you can find me reading, training for my
+      next long run, or debating with friends about Kanye's best album.
   tagline: >
     I'm <bold>Ryan</bold>, a Boston-based software engineer and student at Northeastern University.
     I build useful and intuitive software that makes an impact on people's lives.

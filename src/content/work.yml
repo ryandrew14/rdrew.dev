@@ -4,8 +4,9 @@
   web: https://trace.dajinchu.now.sh
   image: ./images/trace.png
   description: >
-    I designed and imlemented the frontend for a web application that 
-    allows Northeastern students to view course evaluation data.
+    I designed and implemented the frontend for a web application that 
+    allows Northeastern students to view course evaluation data in an
+    intuitive and useful way.
   extras:
     - "🏆 UI/UX Award @ HackDartmouth"
 - name: Predictive Affect

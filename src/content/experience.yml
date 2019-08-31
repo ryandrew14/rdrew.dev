@@ -5,9 +5,13 @@
   linkedin: https://www.linkedin.com/company/paperlessparts/
   image: ./images/paperless.png
   description: >
-    I worked full-time as a software engineer as part of Northeastern
-    University's co-op program. I developed robust solutions to product requests
-    in Python (Django) as well as JavaScript (React/Redux).
+    I worked full-time as a software engineer, developing robust solutions to product requests
+    in Python (Django) as well as JavaScript (React/Redux). I was also responsible
+    for upgrading our QA processes; as part of this, I integrated Selenium
+    into our CI service and wrote some starter tests, providing documentation
+    and a company-wide tech talk to ensure longevity of the solution. Finally,
+    I rewrote our frontend build with Webpack, increasing build performance by
+    over 60% and decreasing bundle size.
   extras:
     - "📅 Jan-Aug 2019"
 - name: Ping Identity
@@ -17,9 +21,11 @@
   linkedin: https://www.linkedin.com/company/ping-identity/
   image: ./images/ping.png
   description: >
-    I worked as an intern on the solutions architecture team. I developed product
-    adapters for customers and developed a reusable environment used by the sales
-    team to demo custom product features.
+    I worked as an intern on the solutions architecture team. I provided value
+    to the sales and sales engineering teams by building a reusable demo environment
+    for sales engineers to demo new features on. I also wrote product adapters
+    to fit new customer use cases. To accomodate this, I attended both sales calls 
+    and onsite sales meetings to better understand customer needs.
   extras:
     - "📅 Jul-Aug 2018"
 - name: Sandbox at Northeastern
@@ -31,6 +37,7 @@
   description: >
     I lead vision and growth for Sandbox, a new software consulting organization
     that I founded with two friends at Northeastern. We employ modern software deveopment
-    practices to build impactful software for academic researchers.
+    practices to build impactful software for academic researchers. I also lead
+    a team of developers in construction of a web application for research.
   extras:
     - "📅 Oct 2018-Present"

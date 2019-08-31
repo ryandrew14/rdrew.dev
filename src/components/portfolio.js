@@ -27,6 +27,18 @@ const Header = styled.div`
   }
 `
 
+const AboutDescription = styled.div`
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 1.25;
+  margin: 40px 0 80px;
+  max-width: 750px;
+
+  > bold {
+    font-weight: 500;
+  }
+`
+
 const CarouselWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -217,14 +229,22 @@ const Portfolio = () => {
           }
         }
       }
+      aboutYaml {
+        body
+        tagline
+      }
     }
   `)
 
   const work = data.allWorkYaml.edges.map(e => e.node)
   const experience = data.allExperienceYaml.edges.map(e => e.node)
+  const about = data.aboutYaml
 
   return (
     <>
+    {about.tagline && (
+      <AboutDescription dangerouslySetInnerHTML={{ __html: about.tagline }} />
+    )}
       <Header>
         work
       </Header>

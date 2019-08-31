@@ -7,6 +7,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faWindowRestore } from '@fortawesome/free-regular-svg-icons'
 
 import Anchor from "styles/anchor"
+import { FadeInSlideUp } from "styles/animations"
 
 const Header = styled.div`
   font-size: 1.5rem;
@@ -39,7 +40,6 @@ const CarouselWrapper = styled.div`
       margin-right: 20px;
     }
   }
-
 `
 
 const CardWrapper = styled.div`
@@ -48,6 +48,10 @@ const CardWrapper = styled.div`
   min-width: 250px;
   justify-content: space-between;
   margin-bottom: 40px;
+  animation: ${props => {
+    console.log(props)
+    return FadeInSlideUp(props.percent, "20px", true)
+  }} .7s;
 
   @media (min-width: 700px) {
     flex-direction: row;
@@ -123,9 +127,9 @@ const StyledImg = styled(Img)`
   border-radius: 5px;
 `
 
-const WorkCard = ({ item }) => {
+const WorkCard = ({ item, percent }) => {
   return (
-    <CardWrapper>
+    <CardWrapper percent={percent}>
       {item.image && <StyledImg fluid={item.image.childImageSharp.fluid} />}
       {!item.image && <CardImagePlaceholder/>}
       <CardInfo>
@@ -164,7 +168,7 @@ const Carousel = ({ data }) => {
   return (
     <CarouselWrapper>
       {
-        data.map(item => <WorkCard item={item} key={item.name}/>)
+        data.map((item, i) => <WorkCard item={item} percent={i / data.length} key={item.name}/>)
       }
     </CarouselWrapper>
   )

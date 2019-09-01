@@ -16,6 +16,7 @@ const Footer = styled.footer`
   text-align: center;
   color: #adadad;
   font-size: 14px;
+  margin: 20px auto;
 `
 
 const Margin = styled.div`

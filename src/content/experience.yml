@@ -1,3 +1,45 @@
+- name: Facebook
+  type: internship
+  subtitle: Software Engineering Intern
+  web: https://www.jpl.nasa.gov/
+  linkedin: https://www.linkedin.com/company/jet-propulsion-laboratory/
+  image: ./images/facebook.png
+  description: >
+    I've done two internships with Facebook - one with Facebook AI Research and one
+    working on the Creator Studio product. With FAIR, I built a block-based web programming
+    interface (think MIT's Scratch) for programming a bot directly. The work was presented at
+    ICRA 2021.
+  extras:
+    - "📅 May-Aug 2020"
+    - "📅 May-Aug 2021"
+- name: NASA Jet Propulsion Laboratory
+  type: internship
+  subtitle: Software Engineering Co-op
+  web: https://www.jpl.nasa.gov/
+  linkedin: https://www.linkedin.com/company/jet-propulsion-laboratory/
+  image: ./images/nasa.png
+  description: >
+    I worked as a co-op on the Curiosity rover team, doing data visualization and
+    contributing to flight software for the rover. I worked out of the lab facility
+    in Pasadena, CA. I can't talk a lot about my work but it involved web development
+    and firmware programming.
+  extras:
+    - "📅 Jan-May 2020"
+- name: Sandbox at Northeastern
+  type: student organization
+  subtitle: Executive Director & Co-founder
+  web: https://sandboxneu.com
+  linkedin: https://www.linkedin.com/company/sandboxneu/
+  image: ./images/sandbox.png
+  description: >
+    I lead vision and growth for Sandbox, a new software consulting organization
+    that I founded with two friends at Northeastern. We employ modern software deveopment
+    practices to build impactful software for academic researchers. I've thoroughly enjoyed
+    learning how to effectively scale an organization like Sandbox, which has gone from three members
+    and one project to twenty-five members and six projects in just about a year. I also lead
+    a team of Sandbox developers in construction of a web application for psychology research.
+  extras:
+    - "📅 Oct 2018-Present"
 - name: Paperless Parts
   type: co-op
   subtitle: Software Engineering Co-op
@@ -14,32 +56,3 @@
     over 60% and decreasing bundle size.
   extras:
     - "📅 Jan-Aug 2019"
-- name: Sandbox at Northeastern
-  type: student organization
-  subtitle: Executive Director & Co-founder
-  web: https://sandboxneu.com
-  linkedin: https://www.linkedin.com/company/sandboxneu/
-  image: ./images/sandbox.png
-  description: >
-    I lead vision and growth for Sandbox, a new software consulting organization
-    that I founded with two friends at Northeastern. We employ modern software deveopment
-    practices to build impactful software for academic researchers. I've thoroughly enjoyed
-    learning how to effectively scale an organization like Sandbox, which has gone from three members
-    and one project to twenty-five members and six projects in just about a year. I also lead
-    a team of Sandbox developers in construction of a web application for psychology research.
-  extras:
-    - "📅 Oct 2018-Present"
-- name: Ping Identity
-  type: internship
-  subtitle: Solutions Architecture Intern
-  web: https://www.pingidentity.com/en.html
-  linkedin: https://www.linkedin.com/company/ping-identity/
-  image: ./images/ping.png
-  description: >
-    I worked as an intern on the solutions architecture team. I provided value
-    to the sales and sales engineering teams by building a reusable demo environment
-    for sales engineers to demo new features on. I also wrote product adapters
-    to fit new customer use cases. To accomodate this, I attended both sales calls 
-    and onsite sales meetings to better understand customer needs.
-  extras:
-    - "📅 Jul-Aug 2018"

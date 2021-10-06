@@ -108,10 +108,10 @@ const Portfolio = () => {
       {about.tagline && (
         <AboutTagline dangerouslySetInnerHTML={{ __html: about.tagline }} />
       )}
-      <Header>work</Header>
-      <PortfolioItems data={work} />
       <Header>experience</Header>
       <PortfolioItems data={experience} />
+      <Header>work</Header>
+      <PortfolioItems data={work} />
       <Header>about</Header>
       {about.bodyParagraphs && (
         <AboutBody>

@@ -1,13 +1,13 @@
 - bodyParagraphs:
     - >
-      I study computer science at Northeastern University in Boston. I recently completed my first co-op
-      at a start-up in Boston called Paperless Parts, where I enjoyed the luxury of being a large portion
-      of the small product team. At Northeastern, I founded and currently spend most of my time leading
+      I study computer science at Northeastern University in Boston. I'm currently on a co-op
+      at NASA's Jet Propulsion Laboratory, working remotely due to the current state of the US.
+       At Northeastern, I founded and currently spend most of my time leading
       Sandbox, a software consulting student organization that builds software for academia.
     - >
       When I'm not working on school or Sandbox, I'm an avid open-source contributor, and I've written code
-      for projects like Webpack and GatsbyJS. Outside of programming, you can find me reading, training for my
-      next long run, or debating with friends about Kanye's best album.
+      for projects like Webpack and GatsbyJS. I'm interested in music, fiction, and engineering better 
+      lives for humans.
   tagline: >
-    I'm <bold>Ryan</bold>, a Boston-based software engineer and student at Northeastern University.
-    I build useful and intuitive software that makes an impact on people's lives.
+    I'm <bold>Ryan</bold>, a student at Northeastern University.
+    I build useful and intuitive software that makes an impact on peoples' lives.

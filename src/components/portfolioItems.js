@@ -104,9 +104,9 @@ const CardImagePlaceholder = styled.div`
 const StyledImg = styled(Img)`
   max-width: 100%;
   min-width: 0;
-  max-height: 326px;
+  max-height: 240px;
   @media (min-width: 430px) {
-    min-width: 326px;
+    min-width: 240px;
   }
   border-radius: 5px;
 `

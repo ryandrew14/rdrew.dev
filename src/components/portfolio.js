@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
@@ -50,6 +50,15 @@ const AboutBody = styled.div`
   }
 `
 
+// FIXME styles are bad but just doing it for German project
+const LanguageToggle = styled.div`
+  padding-top: 16px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
 const Portfolio = () => {
   const data = useStaticQuery(graphql`
     query PortfolioQuery {
@@ -95,6 +104,7 @@ const Portfolio = () => {
       aboutYaml {
         tagline
         bodyParagraphs
+        bodyParagraphsDeutsch
       }
     }
   `)
@@ -102,6 +112,9 @@ const Portfolio = () => {
   const work = data.allWorkYaml.edges.map(e => e.node)
   const experience = data.allExperienceYaml.edges.map(e => e.node)
   const about = data.aboutYaml
+
+  const [isDeutsch, setIsDeutsch] = useState(false);
+  const bodyParagraphs = isDeutsch ? about.bodyParagraphsDeutsch : about.bodyParagraphs;
 
   return (
     <>
@@ -113,9 +126,12 @@ const Portfolio = () => {
       <Header>work</Header>
       <PortfolioItems data={work} />
       <Header>about</Header>
-      {about.bodyParagraphs && (
+      <LanguageToggle onClick={() => setIsDeutsch(v => !v)}>
+        {isDeutsch ? "read in english" : "lesen auf deutsch"}
+      </LanguageToggle>
+      {bodyParagraphs && (
         <AboutBody>
-          {about.bodyParagraphs.map(paragraph => {
+          {bodyParagraphs.map(paragraph => {
             return <div key={paragraph.slice(0, 10)}>{paragraph}</div>
           })}
         </AboutBody>
